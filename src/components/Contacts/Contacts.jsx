@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import css from './App.module.css';
+import css from './Contacts.module.css';
 
-import Form from '../Form/Form';
-import Filter from '../Filter/Filter';
-import ContactList from '../ContactList/ContactList';
+import Form from './Form/Form';
+import Filter from './Filter/Filter';
+import ContactList from './ContactList/ContactList';
 // import { addContact, removeContact } from 'redux/contactItems/items-actions';
 import {
   fetchContacts,
@@ -14,7 +14,7 @@ import {
 
 import { setFilter } from 'redux/filter/filter-actions';
 
-const App = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
   const newContacts = useSelector(store => store.contacts.items);
   const filter = useSelector(store => store.filter);
@@ -59,4 +59,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Contacts;
