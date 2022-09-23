@@ -43,11 +43,15 @@ const Contacts = () => {
   };
 
   return (
-    <div className={css.phonebook}>
+    <div className={css.phonebook_wrapper}>
       <h1>Phonebook</h1>
-      <Form onSubmit={onAddContact} />
+      <div className={css.phonebook}>
+        <h3>Add new contact</h3>
+        <Form onSubmit={onAddContact} />
+      </div>
+
       <div>
-        <h2>Contacts</h2>
+        <h2>Contacts:</h2>
         <Filter filter={filter} onChangeFilter={onSetFilter} />
 
         <ContactList

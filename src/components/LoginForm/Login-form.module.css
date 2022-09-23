@@ -1,18 +1,17 @@
 .group {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 15px;
 }
 
 .label {
-  flex: 0 0 150px;
-  text-align: left;
-  color: #606266;
+  flex: 0 0 120px;
 }
 
 .input {
   border: 1px solid #c0c4cc;
-  padding: 11px;
+  padding: 5px;
   color: #606266;
   border-radius: 3px;
 }

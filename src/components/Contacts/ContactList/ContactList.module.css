@@ -5,16 +5,30 @@ p {
 .contacts_list {
   padding: 0;
 }
-.list_item {
-  display: flex;
-  justify-content: space-around;
-  list-style: square;
-  margin-bottom: 3px;
-  background-color: yellow;
-  text-align: center;
-}
 
 .delete_btn {
-  border-radius: 5px;
-  background-color: transparent;
+  background-color: rgb(68, 63, 82);
+  color: whitesmoke;
+  width: 10px;
+}
+
+.delete_btn:hover {
+  background-color: red;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: bold;
+  color: rgb(79, 78, 83);
+  font-size: 25px;
+}
+
+.number {
+  font-weight: bold;
+  color: rgb(48, 46, 53);
+  font-size: 22px;
 }

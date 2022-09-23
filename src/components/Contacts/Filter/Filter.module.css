@@ -1,0 +1,11 @@
+.filter_input {
+  margin-left: 20px;
+  padding: 0;
+  margin-bottom: 10px;
+
+  /* border: solid 1px; */
+}
+
+.filter_txt {
+  font-size: 20px;
+}

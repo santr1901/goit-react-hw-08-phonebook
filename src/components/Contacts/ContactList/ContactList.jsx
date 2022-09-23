@@ -1,23 +1,26 @@
+import { List, ListItem, Button } from '@mui/material';
 import css from './ContactList.module.css';
 
 const ContactList = ({ contacts, removeContact }) => {
   return (
-    <ul className={css.contacts_list}>
+    <List className={css.contacts_list}>
       {contacts.map(contact => (
-        <li className={css.list_item} key={contact.id}>
+        <ListItem className={css.list_item} key={contact.id}>
           <p>
-            <span>{contact.name}</span>: <span>{contact.number}</span>
+            <span className={css.name}>{contact.name}:</span>{' '}
+            <span className={css.number}>{contact.number}</span>
           </p>
-          <button
+          <Button
+            variant="contained"
             className={css.delete_btn}
             type="button"
             onClick={() => removeContact(contact.id)}
           >
             delete
-          </button>
-        </li>
+          </Button>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 

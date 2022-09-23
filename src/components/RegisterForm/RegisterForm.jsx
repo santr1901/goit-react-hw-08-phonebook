@@ -1,5 +1,5 @@
 import useForm from '../../service/hooks/useForm';
-
+import { Input, Button } from '@mui/material';
 import css from './RegisterForm.module.css';
 
 import { initialState } from './initialState';
@@ -16,46 +16,48 @@ const RegisterForm = ({ onSubmit }) => {
     <form action="" onSubmit={handleSubmit}>
       <div className={css.group}>
         <label className={css.label} htmlFor="">
-          Имя пользователя:
+          User Name:
         </label>
-        <input
+        <Input
           value={name}
           name="name"
           onChange={handleChange}
           className={css.input}
           type="text"
-          placeholder="Введите имя пользователя"
+          placeholder="Name"
           required
         />
       </div>
       <div className={css.group}>
         <label className={css.label} htmlFor="">
-          Email пользователя:
+          User Email:
         </label>
-        <input
+        <Input
           value={email}
           name="email"
           onChange={handleChange}
           className={css.input}
           type="email"
-          placeholder="Введите email пользователя"
+          placeholder="Email"
         />
       </div>
       <div className={css.group}>
         <label className={css.label} htmlFor="">
-          Пароль пользователя:
+          User Password:
         </label>
-        <input
+        <Input
           value={password}
           name="password"
           onChange={handleChange}
           className={css.input}
           type="password"
-          placeholder="Введите пароль пользователя"
+          placeholder="Password"
         />
       </div>
       <div className={css.group}>
-        <button type="submit">Регистрация</button>
+        <Button variant="contained" type="submit">
+          Registration
+        </Button>
       </div>
     </form>
   );

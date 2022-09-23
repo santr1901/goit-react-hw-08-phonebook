@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-
+import { Button } from '@mui/material';
 import { logout } from 'redux/authentication/authentication-operations';
 import { getUser } from 'redux/authentication/authentication-selectors';
 
@@ -12,9 +12,9 @@ const UserMenu = () => {
   return (
     <div>
       <span>{email}</span> |{' '}
-      <button onClick={onLogout} type="button">
+      <Button variant="contained" onClick={onLogout} type="button">
         Logout
-      </button>
+      </Button>
     </div>
   );
 };
